@@ -1,0 +1,33 @@
+generated: '2026-09-02'
+method: searched
+source: https://dayamedikapratama.com/
+docs: https://dayamedikapratama.com/contact-us/
+plan_count: 0
+currency: null
+billing_model: quote-only
+note: >-
+  Daya Medika Pratama publishes no pricing of any kind. The corporate site
+  (dayamedikapratama.com) has no /pricing or /plans page — the full page sitemap is
+  Home, About Us, Services (+ Consultation, AFYA Better Academy, Deployment),
+  Solutions (+ AFYA Better HIS, AFYA Insurance, Better Platform, Dynamics 365),
+  Careers and Contact Us — and every commercial call to action is the single
+  "Talk To Us" contact form. The AFYA Better HIS product site (afyabetter.com)
+  shows "Get 15% Discount On Your First Service / Call 123-456-7890", which is
+  unedited theme placeholder copy (the same page also carries lorem ipsum body text
+  and the placeholder address "123 5th Avenue, New York, US" appears on the
+  corporate Services page), so it is NOT recorded as a published offer. This is a
+  quote-only enterprise implementation business — hospital information systems,
+  insurance core systems, openEHR/FHIR training and Microsoft Dynamics 365
+  deployment — sold through a sales conversation, not a plan table.
+plans: []
+evidence:
+- url: https://dayamedikapratama.com/
+  status: 200
+  finding: no pricing link in primary or footer navigation
+- url: https://dayamedikapratama.com/wp-sitemap-posts-page-1.xml
+  status: 200
+  finding: complete page sitemap contains no pricing or plans page
+- url: https://dayamedikapratama.com/contact-us/
+  status: 200
+  finding: '"Talk To Us" contact form is the only commercial entry point'
+checked: '2026-09-02'

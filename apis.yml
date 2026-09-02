@@ -1,17 +1,44 @@
 aid: daya-medika-pratama
 name: Daya Medika Pratama
-description: 'Daya Medika Pratama is a company surfaced via the API Evangelist harvest backlog (source:
-  openehr-coalition) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  PT Daya Medika Pratama (DMP) is an Indonesian healthcare IT company in Central Jakarta
+  that builds and implements hospital information systems and insurance core systems. It
+  has worked in IT since 2007 — first as a systems integrator building data-acquisition
+  systems for textile production machinery, later as a Microsoft Business Solution Partner
+  in healthcare and education — and today sells AFYA Better HIS (a hospital information
+  system with an openEHR-based clinical data repository, stated as connected to BPJS
+  Kesehatan, Kemenkes/SATUSEHAT, FHIR and Better, and in use at more than 40 Indonesian
+  hospitals), AFYA Insurance (policy and claims management), implementation of the Better
+  digital health platform, and Microsoft Dynamics 365 as hospital back office. It is an
+  openEHR industry partner and a Better (better.care) partner for the Indonesian market,
+  and runs AFYA Better Academy, an openEHR and FHIR training programme for hospital IT
+  staff. Its positioning line is "One Patient One Record for Better Health". DMP publishes
+  no public API, developer portal, SDK or machine-readable contract; the standards it
+  names are national platforms its products consume on a hospital's behalf, not APIs it
+  ships.
 url: https://raw.githubusercontent.com/api-evangelist/daya-medika-pratama/refs/heads/main/apis.yml
+image: https://dayamedikapratama.com/wp-content/uploads/2024/10/cropped-Colored.png
 x-type: company
 x-source: harvest:openehr-coalition
-x-tier: stub
-x-tier-reason: harvest
+x-tier: no-public-api
+x-tier-reason: >-
+  Enrichment pass 2026-09-02 completed STEP 0b contract discovery against every host the
+  company controls and found no API, no developer program and no machine-readable contract.
 specificationVersion: '0.20'
 created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Healthcare
+- Health Information System
+- Electronic Health Records
+- openEHR
+- FHIR
+- Hospital
+- Insurance
+- Systems Integrator
+- Microsoft Dynamics 365
+- Indonesia
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,3 +48,69 @@ maintainers:
 common:
 - type: Website
   url: https://dayamedikapratama.com/
+- type: About
+  url: https://dayamedikapratama.com/about-us/
+- type: ProductPage
+  url: https://afyabetter.com/
+- type: KnowledgeBase
+  url: https://afyabetter.com/documentation/
+- type: Careers
+  url: https://dayamedikapratama.com/careers/
+- type: ContactForm
+  url: https://dayamedikapratama.com/contact-us/
+- type: LLMsTxt
+  url: llms/daya-medika-pratama-llms.txt
+- type: Plans
+  url: plans/daya-medika-pratama-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/daya-medika-pratama-rate-limits.yml
+- type: DomainSecurity
+  url: security/daya-medika-pratama-domain-security.yml
+x-pointer-liveness:
+  checked: '2026-09-02'
+  note: >-
+    Every external pointer above was fetched with a browser User-Agent on 2026-09-02 and
+    returned HTTP 200 with real page content (not an SPA shell or soft-404).
+  results:
+  - url: https://dayamedikapratama.com/
+    status: 200
+  - url: https://dayamedikapratama.com/about-us/
+    status: 200
+  - url: https://afyabetter.com/
+    status: 200
+  - url: https://afyabetter.com/documentation/
+    status: 200
+  - url: https://dayamedikapratama.com/careers/
+    status: 200
+  - url: https://dayamedikapratama.com/contact-us/
+    status: 200
+  - url: https://dayamedikapratama.com/wp-content/uploads/2024/10/cropped-Colored.png
+    status: 200
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Daya Medika Pratama ships AFYA Better HIS and AFYA Insurance as installed end-user
+    hospital software sold through a "Talk To Us" form, and the only documentation it
+    publishes is an Indonesian end-user knowledge base at afyabetter.com/documentation/
+    whose one substantive article is an Excel-template data import walkthrough — no
+    developer portal, no API reference, no api./developer./docs. subdomain in DNS, and
+    /openapi.json, /graphql, /apis.json and every /.well-known/ path 404 on both the
+    corporate and product hosts.
+  evidence:
+  - url: https://afyabetter.com/documentation/
+    status: 200
+  - url: https://afyabetter.com/docs/afya-office/import-data/
+    status: 200
+  - url: https://dayamedikapratama.com/openapi.json
+    status: 404
+  - url: https://dayamedikapratama.com/.well-known/api-catalog
+    status: 404
+  - url: https://dayamedikapratama.com/wp-sitemap-posts-page-1.xml
+    status: 200
+  checked: '2026-09-02'

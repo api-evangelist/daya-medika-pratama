@@ -1,0 +1,30 @@
+generated: '2026-09-02'
+method: searched
+source: https://afyabetter.com/documentation/
+limit_count: 0
+headers: []
+exhaustion_status: null
+note: >-
+  No rate limits are documented because Daya Medika Pratama publishes no API. There
+  is no developer portal, no API reference and no machine-readable contract on any
+  host the company controls; repair-api-bases returns verdict "missing" (no source
+  names an API host). The only documentation the company publishes is the AFYA
+  Better HIS knowledge base at afyabetter.com/documentation/, which is an end-user
+  guide in Indonesian — its one substantive article walks a hospital administrator
+  through bulk-loading patient master data from a downloaded Excel template
+  (Patient > Master > Patient), and the remaining three articles are lorem ipsum
+  placeholders. Bulk data movement into AFYA Better HIS is documented as a
+  spreadsheet import, not as a rate-limited API. An honest zero, not an unchecked
+  field.
+limits: []
+evidence:
+- url: https://afyabetter.com/documentation/
+  status: 200
+  finding: end-user knowledge base; no API reference, no limits stated
+- url: https://afyabetter.com/docs/afya-office/import-data/
+  status: 200
+  finding: bulk data ingress is an Excel template import, not an API
+- url: https://dayamedikapratama.com/openapi.json
+  status: 404
+  finding: no machine-readable contract on the corporate host
+checked: '2026-09-02'

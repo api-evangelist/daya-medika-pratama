@@ -1,0 +1,98 @@
+# Daya Medika Pratama
+
+> PT Daya Medika Pratama (DMP) is an Indonesian healthcare IT company in Jakarta that
+> builds and implements hospital information systems and insurance core systems. Active
+> in IT since 2007 — first as a systems integrator building data-acquisition systems for
+> textile production machinery, later as a Microsoft Business Solution Partner in
+> healthcare and education — it now sells three things: AFYA Better HIS (a hospital
+> information system with an openEHR-based clinical data repository, in use at 40+
+> Indonesian hospitals), AFYA Insurance (an insurance policy and claims management
+> system), and implementation of the Better digital health platform and Microsoft
+> Dynamics 365. Its positioning line is "One Patient One Record for Better Health".
+
+## Important for agents: there is no Daya Medika Pratama API
+
+Daya Medika Pratama publishes **no public API, no developer portal, no SDK, no webhooks
+and no machine-readable contract**. As of 2026-09-02 there is nothing here for an agent
+to call. Specifically:
+
+- No `api.`, `developer.`, `docs.` or `portal.` subdomain of dayamedikapratama.com
+  resolves in DNS.
+- `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`, `/api-docs`,
+  `/graphql`, `/mcp`, `/llms.txt` and `/apis.json` all return HTTP 404 on both
+  dayamedikapratama.com and afyabetter.com.
+- Every `/.well-known/` path probed (security.txt, openid-configuration,
+  oauth-authorization-server, api-catalog, ai-plugin.json, agent-card.json, agent.json)
+  returns HTTP 404 on both hosts.
+- There is no GitHub organization for the company and no first-party package on npm,
+  PyPI, Maven Central, NuGet, RubyGems, crates.io or pkg.go.dev.
+
+The standards DMP names — openEHR, HL7 FHIR, SATUSEHAT (the Indonesian Ministry of
+Health's national health data exchange) and BPJS Kesehatan (the national health
+insurance payer) — are APIs the company's products **consume** on behalf of a hospital
+customer. They are not APIs DMP publishes. The one documented bulk-data path into AFYA
+Better HIS is an Excel template import performed by a hospital administrator inside the
+application, not an API.
+
+If you need to integrate with a DMP deployment, the entry point is a sales conversation:
+https://dayamedikapratama.com/contact-us/
+
+## Company
+
+- [Home](https://dayamedikapratama.com/): "One Patient One Record for Better Health" —
+  accelerating digital transformation of the healthcare industry in Indonesia.
+- [About Us](https://dayamedikapratama.com/about-us/): history from 2007, team, vision
+  and mission. Director: Ricky Gunawan.
+- [Careers](https://dayamedikapratama.com/careers/): open roles.
+- [Contact Us](https://dayamedikapratama.com/contact-us/): the "Talk To Us" form, which
+  is the only commercial entry point the company publishes.
+
+## Services
+
+- [Consultation](https://dayamedikapratama.com/services/consultation/): direction for
+  hospitals and health insurers implementing digital transformation projects.
+- [AFYA Better Academy](https://dayamedikapratama.com/services/afya-better-academy/):
+  openEHR and FHIR training, aimed at preparing hospital IT staff to deploy the system.
+- [Deployment](https://dayamedikapratama.com/services/deployment/): training and
+  implementation of the IT system.
+
+## Solutions
+
+- [AFYA Better HIS](https://dayamedikapratama.com/solutions/afya-better-his/): hospital
+  information system covering registration, electronic medical records, pharmacy,
+  laboratory, appointments and BPJS claims; stated as connected to BPJS, Kemenkes
+  (SATUSEHAT), FHIR and Better. Product site: https://afyabetter.com/
+- [AFYA Insurance](https://dayamedikapratama.com/solutions/afya-insurance/): policy
+  management, claims processing, customer portal, analytics and reporting for insurers,
+  brokers and policyholders.
+- [Better Platform](https://dayamedikapratama.com/solutions/better-platform/): DMP is a
+  partner of Better (better.care) for the openEHR-based digital health platform in the
+  Indonesian market; the partnership extends DMP's HIS into the clinical domain with a
+  clinical data repository and low-code tools.
+- [Dynamics 365](https://dayamedikapratama.com/solutions/dynamics-365/): Microsoft
+  Dynamics 365 ERP/CRM, positioned as hospital back office.
+
+## Product documentation
+
+- [AFYA Better HIS knowledge base](https://afyabetter.com/documentation/): an end-user
+  guide in Indonesian, not an API reference. Four articles across three categories
+  (AFYA, Better, Microsoft Dynamics AX 2012); three are unedited lorem ipsum
+  placeholders.
+- [Import Data user guide](https://afyabetter.com/docs/afya-office/import-data/): the one
+  substantive article — bulk loading master data (patients and similar) from a downloaded
+  Excel template via Patient > Master > Patient.
+
+## Standards and ecosystem context
+
+- openEHR: DMP is listed as an openEHR industry partner and joined the openEHR Partner
+  Programme. https://openehr.org/
+- Better: partnership announced for the Indonesian market —
+  https://www.better.care/news/pt-daya-medika-pratama-will-drive-the-healthcare-transformation-in-indonesia-on-top-of-the-better-digital-health-platform/
+- SATUSEHAT / Kemenkes and BPJS Kesehatan: national Indonesian health platforms DMP's
+  products integrate with. The APIs belong to those bodies, not to DMP.
+
+## About this file
+
+Generated by API Evangelist from the company's own public pages and live probes on
+2026-09-02. API Evangelist does not operate this company's software. Nothing here was
+obtained with credentials. Corrections and removal are free: info@apievangelist.com

@@ -1,0 +1,67 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Direct unauthenticated HTTP probes of every host Daya Medika Pratama serves —
+  the corporate site (dayamedikapratama.com) and the AFYA Better HIS product site
+  (afyabetter.com, confirmed as Daya Medika Pratama's own product site by its own
+  copy: "AFYA Better HIS adalah sistem informasi rumah sakit karya PT Daya Medika
+  Pratama"). No API host exists to probe: the company publishes no developer
+  portal, no api./developer./docs. subdomain resolves, and repair-api-bases
+  returns verdict "missing".
+note: >-
+  Every probed path returned 404. Both hosts are WordPress installs that answer an
+  unknown path with the themed 404 page (HTML, HTTP 404), so there is no soft-200
+  false positive here. Because nothing returned a real document, this file records
+  an ABSENCE and deliberately emits NO WellKnown or SecurityTxt pointer in
+  apis.yml — the probe is the data, not a claim that the provider serves these
+  surfaces.
+hosts:
+- host: dayamedikapratama.com
+  role: corporate website (WordPress)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: afyabetter.com
+  role: AFYA Better HIS product site (WordPress)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+checked: '2026-09-02'
